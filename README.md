@@ -24,5 +24,8 @@ Python入门容易，所以只对项目案例进行了实现，并且合适的�
     - [变量进阶！](books/06_cyan_learning/变量进阶（理解）.md)
     - [函数进阶！](books/06_cyan_learning/函数进阶.md)
     
-    # 先整到这吧！困了睡觉！
-    ![晚安！](./books/loveme.png)
+## Python面向对象
+Python是一门面向对象的语言，所以心里要有数，话不多说，看笔记，多写多练习！
+
+ # 先整到这吧！困了睡觉！
+ ![晚安！](./books/loveme.png)
