@@ -41,5 +41,8 @@ Python是一门面向对象的语言，所以心里要有数，话不多说，�
 - [文件](https://aqingcyan.github.io/PythonLearning/books/OOP/13_文件.html)
 - [eval函数](https://aqingcyan.github.io/PythonLearning/books/OOP/14_eval函数.html)
  
+ 
+## 重点！数据结构与算法
+- [算法的效率衡量](books/数据结构/01.md)
  # 先整到这吧！困了睡觉！
  ![晚安！](./books/loveme.png)
