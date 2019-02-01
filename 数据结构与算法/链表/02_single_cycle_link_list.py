@@ -113,7 +113,7 @@ class SingleCycleLinkList(object):
                     self.__head = cur.next  # 让头节点指向第一个节点的下一个节点
                     rear.next = self.__head  # 让尾节点指向新的头节点（即为下一个节点）
                     return
-                else:
+                else:  # 中间节点的情况
                     pre.next = cur.next
                     return
             else:  # 如果不是要删除的节点，pre指向cur（往后移动一个节点），cur指向next（往后移动一个节点）
