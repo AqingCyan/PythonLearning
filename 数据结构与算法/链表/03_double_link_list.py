@@ -100,7 +100,7 @@ class DoubleLinkList(object):
                         cur.next.prev = cur.prev
                     break
             else:  # 如果不是要删除的节点，pre指向cur（往后移动一个节点），cur指向next（往后移动一个节点）
-                pre = cur
+                # pre = cur
                 cur = cur.next
 
     def search(self, item):
