@@ -12,7 +12,7 @@ def merge_sort(nums):
     left_pointer, right_pointer = 0, 0  # 两个指针
     result = []
     while left_pointer < len(left_list) and right_pointer < len(right_list):  # 两个指针的其中一个在移动的时候如果越界了说明排序完成
-        if left_list[left_pointer] < right_list[right_pointer]:
+        if left_list[left_pointer] <= right_list[right_pointer]:
             result.append(left_list[left_pointer])
             left_pointer += 1
         else:
