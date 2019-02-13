@@ -31,4 +31,61 @@ class Tree(object):
                 return
             else:
                 queue.append(cur_node.right_child)
-    
+
+    def breadth_travel(self):  # 遍历树
+        """广度遍历"""
+        if self.root is None:
+            return
+        queue = [self.root]
+        while queue:
+            cur_node = queue.pop(0)
+            print(cur_node.elem, end=" ")
+            if cur_node.left_child is not None:
+                queue.append(cur_node.left_child)
+            if cur_node.right_child is not None:
+                queue.append(cur_node.right_child)
+
+    def preorder(self, node):  # 先序遍历每次根都在改变（一次次抽离不同的子树），所以我们传参
+        """先序遍历"""
+        if node is None:  # 最底层的子树决定了退出递归
+            return
+        print(node.elem, end=" ")  # 先序遍历，先打印当前的根节点，然后再处理左子树，再处理右子树
+        self.preorder(node.left_child)  # 先左子树，以上一根节点的左子树为新的根节点
+        self.preorder(node.right_child)
+
+    def inorder(self, node):
+        """中序遍历"""
+        if node is None:  # 退出递归条件
+            return
+        self.inorder(node.left_child)  # 中序遍历，先打印左边节点，再打印当前树根节点，再打印右节点
+        print(node.elem, end=" ")
+        self.inorder(node.right_child)
+
+    def postorder(self, node):
+        """后序遍历"""
+        if node is None:  # 退出递归条件
+            return
+        self.postorder(node.left_child)  # 后序遍历，先打印左边节点，再打印右节点，再打印当前树根节点
+        self.postorder(node.right_child)
+        print(node.elem, end=" ")
+
+
+# 测试用例
+tree = Tree()
+tree.add(0)
+tree.add(1)
+tree.add(2)
+tree.add(3)
+tree.add(4)
+tree.add(5)
+tree.add(6)
+tree.add(7)
+tree.add(8)
+tree.add(9)
+tree.breadth_travel()  # 广度遍历
+print()
+tree.preorder(tree.root)  # 先序遍历
+print()
+tree.inorder(tree.root)  # 中序遍历
+print()
+tree.postorder(tree.root)  # 后序遍历
